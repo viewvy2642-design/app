@@ -1,0 +1,13 @@
+services:
+  lamp:
+    image: mattrayner/lamp:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/app
+    environment:
+      - MYSQL_ROOT_PASSWORD=""
+      - MYSQL_DATABASE=shop
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=Passw1234
+    restart: unless-stopped
